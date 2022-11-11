@@ -1,0 +1,17 @@
+<html>
+<head><meta charset="utf-8">
+<title>Добавление hashtag</title></head>
+<body>
+<h1>Добавление hashtag</h1>
+<div><a href="{% url 'index' %}">Главная</a>
+{% for rubric in rubrics %}
+    <a href="{% url 'by_rubric' rubric.pk %}">{{rubric.name}}</a>
+    {% endfor %}
+</div>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>

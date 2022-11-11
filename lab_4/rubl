@@ -1,0 +1,9 @@
+n=int(input())
+prov=n%10
+prov2=n%100
+if 9>=prov>=5 or prov==0 or 19>=prov2>=11:
+  print(n, 'программистов')
+elif 4>=prov>=2:
+  print(n, 'программиста')
+elif prov==1:
+  print(n, 'программист')
